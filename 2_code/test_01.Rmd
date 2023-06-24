@@ -1,0 +1,67 @@
+---
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+author: "**Irpan Chumaedi**"
+title: "Kajian Debit Lingkungan di Sungai Citarum Hulu"
+#subtitle: "`r params$client_company`, `r params$kecamatan`, `r params$kabupaten`"
+output:
+  bookdown::html_document2: default
+  #officedown::rdocx_document:
+    #reference_docx: template.docx
+params:
+  river_location: "Citarum"
+  name_ca: "Citarum"
+  length_river: 550
+  length_river_proyek: 550
+  slope_river: 0.002
+  slope_river_proyek: 0.0003
+  area_ca: 11542
+  area_ca_proyek: 30.5
+  client_company: "PT. Wastek International"
+  kecamatan: "Babakan Cikao"
+  kabupaten: "Purwakarta"
+  provinsi: "Jawa Barat"
+  sta_hujan1: "Sta. Hujan Cikao"
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  # Table captioning
+  tab.cap.style = "Table Caption",
+  tab.cap.pre = "Table ",
+  tab.cap.sep=": ",
+  # Figure captioning
+  fig.cap.style = "Image Caption",
+  fig.cap.pre = "Figure ",
+  fig.cap.sep=": ",
+  fig.align = "center",
+  fig.width = 6,
+  dpi=600
+)
+
+# Libraries
+library(officedown)
+library(officer)
+library(tidyverse)
+library(timetk)
+library(dplyr)
+library(lubridate)
+
+# Import data
+# rainfall_data <- read_csv("01_data/rainfall_data.csv")
+# rainfall_data <- rainfall_data %>% 
+  # filter(rainfall_mm != "-") %>% #hilangkan data yang kosong
+  # mutate(date=mdy(date)) #ganti tipe kolom menjadi tanggal
+
+```
+
+# Abstrak
+
+# Abstract
+
+# Pendahuluan
+
+Secara global, penggunaan air yang berlebihan menyebabkan masalah lingkungan yang sangat serius dalam beberapa dekade terakhir [@vörösmarty2010].
+
+# Daftar Pustaka
