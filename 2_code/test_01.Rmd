@@ -4,7 +4,9 @@ author: "**Irpan Chumaedi**"
 title: "Kajian Debit Lingkungan di Sungai Citarum Hulu"
 #subtitle: "`r params$client_company`, `r params$kecamatan`, `r params$kabupaten`"
 output:
-  bookdown::html_document2: default
+  #bookdown::html_document2: default
+  bookdown::word_document2: 
+    #reference_docx: template_thesis.docx
   #officedown::rdocx_document:
     #reference_docx: template.docx
 params:
@@ -15,8 +17,6 @@ params:
   slope_river: 0.002
   slope_river_proyek: 0.0003
   area_ca: 11542
-  area_ca_proyek: 30.5
-  client_company: "PT. Wastek International"
   kecamatan: "Babakan Cikao"
   kabupaten: "Purwakarta"
   provinsi: "Jawa Barat"
@@ -56,12 +56,74 @@ library(lubridate)
 
 ```
 
-# Abstrak
+# Abstrak {.unnumbered}
 
-# Abstract
+# Abstract {.unnumbered}
+
+# Halaman Pengesahan {.unnumbered}
+
+# Daftar Isi {.unnumbered}
+
+# Daftar Gambar {.unnumbered}
+
+# Daftar Tabel {.unnumbered}
 
 # Pendahuluan
 
-Secara global, penggunaan air yang berlebihan menyebabkan masalah lingkungan yang sangat serius dalam beberapa dekade terakhir [@vörösmarty2010].
+## Latar Belakang
+
+Secara global, penggunaan air yang berlebihan menyebabkan masalah lingkungan yang sangat serius dalam beberapa dekade terakhir [@vörösmarty2010]. Air yang dibutuhkan oleh manusia naik secara eksponensial semenjak masa pra-industrialisasi khususnya setelah tahun 1950-an [@riverine2018]. Krisis air yang terjadi bukan hanya terjadi dari sudut pandang manusia, namun juga biota air sungai yang hidup didalamnya. *World Wide Fund for Nature* atau [@wwf2020] , menyebutkan bahwa hingga 84% hewan air tawar di seluruh dunia telah berkurang sejak tahun 1970.
+
+## Masalah Penelitian
+
+## Maksud dan Tujuan Penelitian
+
+## Lingkup Studi
+
+## Batasan Masalah
+
+## Lokasi Kajian
+
+## Sistimatika Penulisan
+
+# Tinjauan Pustaka
+
+## Studi Literatur
+
+### Kerangka Pikir (*Framework*)
+
+### Metode dan Aplikasi (*Method and practice*)
+
+### Kondisi Sungai Citarum Hulu (*Overview Upper Citarum*)
+
+### Studi Kasus mengenai habitat (*Habitual Study Cases*)
+
+### Studi Kasus Mengenai hidrologi (*Hidrological Study Cases*)
+
+## Sungai dan DAS
+
+## Analisa Debit Lingkungan
+
+### Metode Hidrologi
+
+### Metode Hidrolika
+
+### Metode Simulasi Habitat
+
+### Metode Holistik
+
+# Metodologi Penelitian
+
+# Analisa Sementara
+
+## Analisa Lengkung Durasi Debit (*Flow Duration Curve Analysis*)
+
+## Analisa Kesenjangan Debit (*Gap Analysis*)
+
+## Tinjauan Berdasarkan Aturan Lingkungan
+
+## Analisa Kecocokan Habitat (*Habitat Suitability*)
+
+# Kesimpulan Sementara
 
 # Daftar Pustaka
