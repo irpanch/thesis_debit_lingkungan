@@ -56,17 +56,31 @@ library(lubridate)
 
 ```
 
+\newpage
+
 # Abstrak {.unnumbered}
+
+\newpage
 
 # Abstract {.unnumbered}
 
+\newpage
+
 # Halaman Pengesahan {.unnumbered}
+
+\newpage
 
 # Daftar Isi {.unnumbered}
 
+\newpage
+
 # Daftar Gambar {.unnumbered}
 
+\newpage
+
 # Daftar Tabel {.unnumbered}
+
+\newpage
 
 # Pendahuluan
 
@@ -76,9 +90,9 @@ Secara global, penggunaan air yang berlebihan menyebabkan masalah lingkungan yan
 
 Di Indonesia sendiri, perubahan regim hidrologis akibat  kegiatan manusia seperti ekstraksi dan okupasi menyebabkan bertambahnya debit banjir dan berkurangnya debit andalan di Sungai Citarum Hulu [@nurcahyo2016]. Hal tersebut terjadi hampir bersamaan dengan rusaknya habitat ikan endemik yang ada [@istiqomah2021; @kaniawati2012; @kartamihardja2019]. Kondisi tersebut menunjukkan bahwa Sungai Citarum Hulu dalam keadaan yang tidak baik karena keberagaman ikan merupakan salah satu indikator ekosistem sungai yang sehat [@leigh2012].
 
-Dalam bidang hidrologi, mitigasi untuk krisis air dan habitat sungai diatas sebenarnya sudah diakomodasi dengan penentuan debit lingkungan (*environmental flow*). @acreman2004, mendefinisikan Debit lingkungan sebagai kuantitas atau volume air yang dibutuhkan dari waktu ke waktu untuk menjaga kesehatan sungai di suatu keadaan tertentu, di mana keadaan tersebut harus ditentukan sebelumnya atau disepakati berdasarkan *trade-off* dengan pertimbangan lain\".
+Dalam bidang hidrologi, mitigasi untuk krisis air dan habitat sungai diatas sebenarnya sudah diakomodasi dengan penentuan debit lingkungan (*environmental flow*). @acreman2004, mendefinisikan Debit lingkungan sebagai kuantitas atau volume air yang dibutuhkan dari waktu ke waktu untuk menjaga kesehatan sungai di suatu keadaan tertentu, di mana keadaan tersebut harus ditentukan sebelumnya atau disepakati berdasarkan *trade-off* dengan pertimbangan lain".
 
-Terdapat 207 metode yang  bisa digunakan untuk menghitung debit lingkungan [@stamou2018]. Metode-metode tersebut kemudian bisa diklasifikasikan menjadi 4 (empat) bagian: hidrologi, hidraulik, habitat, dan holistik [@tharme]. Metode probabilitas Q~95~ [@sni6738:20152015] yang umumnya digunakan di Indonesia  masuk dalam klasifikasi metode hidrologi. Efektivitas penerapan metode Q~95~ ini masih perlu dikaji terutama terhadap respon balik habitat yang ada di sungai mengingat parameter yang dijadikan acuan hanya nilai debit tertentu.Hal ini sebenarnya bisa berbahaya karena konsekuensi perhitungan debit lingkungan yang sederhana bisa menimbulkan resiko kepada integritas masa depan dan  keanekaragaman hayati dari ekosistem sungai [@arthington2006]. Untuk itu perlu dilakukan kajian mengenai efektivitas metode yang umum digunakan beserta perbandingannya dengan metode lain dengan parameter yang lebih beragam serta kompleksitas yang lebih tinggi.
+Terdapat 207 metode yang  bisa digunakan untuk menghitung debit lingkungan [@stamou2018]. Metode-metode tersebut kemudian bisa diklasifikasikan menjadi 4 (empat) bagian: hidrologi, hidraulik, habitat, dan holistik [@tharme2003]. Metode probabilitas Q~95~ [@sni6738:20152015] yang umumnya digunakan di Indonesia  masuk dalam klasifikasi metode hidrologi. Efektivitas penerapan metode Q~95~ ini masih perlu dikaji terutama terhadap respon balik habitat yang ada di sungai mengingat parameter yang dijadikan acuan hanya nilai debit tertentu.Hal ini sebenarnya bisa berbahaya karena konsekuensi perhitungan debit lingkungan yang sederhana bisa menimbulkan resiko kepada integritas masa depan dan  keanekaragaman hayati dari ekosistem sungai [@arthington2006]. Untuk itu perlu dilakukan kajian mengenai efektivitas metode yang umum digunakan beserta perbandingannya dengan metode lain dengan parameter yang lebih beragam serta kompleksitas yang lebih tinggi.
 
 ## Masalah Penelitian
 
