@@ -1,24 +1,63 @@
 # tidy the raw data
 
+# load_library ------------------------------------------------------------
 library(tidyverse)
 library(lubridate)
+library(fasstr)
 
-# import data
+# import and checking -----------------------------------------------------
+
 dayeuh_kolot <- read_csv("1_data/hymos_dayeuh_kolot.csv")
 
-# cek data hasil import
+## cek data hasil import
 glimpse(dayeuh_kolot)
 
-#ambil kolom yang penting, filter terhadap data yang ada. rubah format.
+# filter, tidy, fix data type ---------------------------------------------
+
+## ambil kolom yang penting, filter terhadap data yang ada. rubah format.
 dayeuh_kolot_filter <- dayeuh_kolot %>% select(date:station) %>% 
   filter(value != "-")
 
+## convert kolom debit menjadi numeric
 dayeuh_kolot_filter$value <- as.numeric(dayeuh_kolot_filter$value)
+
+## convert kolom tanggal menjadi format apa adanya di excel
 dayeuh_kolot_filter$date <- strptime(dayeuh_kolot_filter$date,format="%d-%b-%y")
+## convert kolom tanggal menjadi format seperti yang diinginkan
 dayeuh_kolot_filter$date <- as.Date(dayeuh_kolot_filter$date,"%Y-%m-%d")
 
-# cek data hasil import
+## cek data hasil import
 glimpse(dayeuh_kolot_filter)
 
-# cek plot
+# plotting ----------------------------------------------------------------
 ggplot(data=dayeuh_kolot_filter, aes(x=date, y=value))+geom_line()
+
+# analisa_debit -----------------------------------------------------------
+## rename column to adjust the fasstr package
+dy_kolot_rename <- dayeuh_kolot_filter %>% 
+  rename(Date=date,
+         Value=value,
+         groups=station)
+
+calc_longterm_daily_stats(data = dy_kolot_rename)
+
+plot_flow_data(data=dy_kolot_rename)
+plot_longterm_monthly_stats(data=dy_kolot_rename)
+plot_monthly_stats(data = dy_kolot_rename)
+screen_flow_data(data = dy_kolot_rename)
+plot_data_screening(data = dy_kolot_rename)
+
+## monthly calculation
+calc_monthly_stats(data = dy_kolot_rename)
+plot_monthly_stats(data = dy_kolot_rename)
+plot_monthly_stats2(data = dy_kolot_rename)
+
+## daily calculation
+calc_daily_stats(data = dy_kolot_rename)
+plot_daily_stats(data = dy_kolot_rename)
+
+## long term statistic
+plot_flow_duration(data = dy_kolot_rename)
+calc_flow_percentile(data = dy_kolot_rename,
+                     flow_value = 20, #untuk Q80
+                     months = 1:6) # bulan 1 sampai 6.
