@@ -79,7 +79,8 @@ plot_monthly_stats2(data = dy_kolot_rename)
 
 ## daily calculation
 calc_daily_stats(data = dy_kolot_rename)
-plot_daily_stats(data = dy_kolot_rename)
+plot_daily_stats(data = dy_kolot_rename, include_title = TRUE)
+plot_daily_stats(data = dy_kolot_rename, roll_days = 7) #interval 7 hari.
 
 ## long term statistic
 plot_flow_duration(data = dy_kolot_rename)
