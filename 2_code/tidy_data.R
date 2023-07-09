@@ -60,6 +60,9 @@ glimpse(majalaya_filter)
 
 screen_flow_data(data = majalaya_rename)
 plot_data_screening(data = majalaya_rename)
+plot_missing_dates(data = majalaya_rename)
+mjly_fill <- fill_missing_dates(data = majalaya_rename)
+plot_missing_dates(data = mjly_fill)
 
 # plotting ----------------------------------------------------------------
 ggplot(data=dayeuh_kolot_filter, aes(x=date, y=value))+geom_line()
@@ -121,8 +124,8 @@ long_term_nanjung <- calc_longterm_daily_stats(data = nanjung_rename)
 plot_longterm_monthly_stats(data=nanjung_rename)
 write.csv(long_term_nanjung,"4_output/long_term_nanjung.csv")
 
-long_term_majalaya <- calc_longterm_daily_stats(data = majalaya_rename,ignore_missing = T)
-plot_longterm_monthly_stats(data=majalaya_rename,ignore_missing = T)
+long_term_majalaya <- calc_longterm_daily_stats(data = mjly_fill,ignore_missing = T)
+plot_longterm_monthly_stats(data=mjly_fill,ignore_missing = T)
 write.csv(long_term_majalaya,"4_output/long_term_majalaya.csv")
 
 
