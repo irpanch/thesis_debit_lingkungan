@@ -58,6 +58,8 @@ glimpse(sapan_filter)
 glimpse(nanjung_filter)
 glimpse(majalaya_filter)
 
+write.csv(nanjung_filter,"4_output/nanjung_filter.csv")
+
 screen_flow_data(data = majalaya_rename)
 plot_data_screening(data = majalaya_rename)
 plot_missing_dates(data = majalaya_rename)
@@ -139,8 +141,8 @@ plot_monthly_stats2(data = sapan_rename)
 calc_monthly_stats(data = nanjung_rename)
 plot_monthly_stats2(data = nanjung_rename)
 
-calc_monthly_stats(data = majalaya_rename, allowed_missing = T)
-plot_monthly_stats2(data = majalaya_rename, ignore_missing = T)
+calc_monthly_stats(data = mjly_fill,ignore_missing = T)
+plot_monthly_stats2(data = mjly_fill, ignore_missing = T)
 
 
 ## daily calculation
@@ -148,10 +150,221 @@ calc_daily_stats(data = dy_kolot_rename)
 plot_daily_stats(data = dy_kolot_rename, include_title = TRUE)
 plot_daily_stats(data = dy_kolot_rename, roll_days = 7) #interval 7 hari.
 
+plot_daily_stats(data = majalaya_rename, ignore_missing = T, include_title = TRUE)
+
+plot_daily_stats(data = sapan_rename, include_title = TRUE)
+
+plot_daily_stats(data = nanjung_rename, include_title = TRUE)
+
 ## flow duration curve
 plot_flow_duration(data = dy_kolot_rename)
 calc_flow_percentile(data = dy_kolot_rename,
-                     flow_value = 20, #untuk Q80
-                     months = 1:12) # bulan 1 sampai 6.
+                     flow_value = 5, 
+                     months = 1:12) 
+
+plot_flow_duration(data = majalaya_rename,ignore_missing = T)
+calc_flow_percentile(data = majalaya_rename,
+                     flow_value = 5, #untuk debit "X",brp percentilenya
+                     months = 1:12) 
+
+plot_flow_duration(data = sapan_rename)
+calc_flow_percentile(data = sapan_rename,
+                     flow_value = 5)
+
+plot_flow_duration(data = nanjung_rename)
+calc_flow_percentile(data = nanjung_rename,
+                     flow_value = 5,
+                     months = 1:12) 
 
 
+Q_majalaya <- calc_longterm_percentile(data = majalaya_rename,
+                         percentiles = c(5,10,20,30))
+
+Q_sapan <- calc_longterm_percentile(data = sapan_rename,
+                         percentiles = c(5,10,20,30))
+
+Q_dy_kolot <- calc_longterm_percentile(data = dy_kolot_rename,
+                         percentiles = c(5,10,20,30))
+
+Q_nanjung <- calc_longterm_percentile(data = nanjung_rename,
+                         percentiles = c(5,10,20,30))
+
+
+write.csv(rbind(Q_majalaya, Q_sapan, Q_dy_kolot, Q_nanjung), 
+          "4_output/Q_andalan.csv")
+
+## debit per bulan 
+
+# debit_perbulan_majalaya -------------------------------------------------
+
+Q_m_jan <- calc_longterm_percentile(data = majalaya_rename,
+                                       percentiles = c(5,10,20,30),
+                                       months = 1)
+Q_m_feb <- calc_longterm_percentile(data = majalaya_rename,
+                                           percentiles = c(5,10,20,30),
+                                           months = 2)
+Q_m_mar <- calc_longterm_percentile(data = majalaya_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 3)
+Q_m_apr <- calc_longterm_percentile(data = majalaya_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 4)
+Q_m_may <- calc_longterm_percentile(data = majalaya_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 5)
+Q_m_jun <- calc_longterm_percentile(data = majalaya_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 6)
+Q_m_jul <- calc_longterm_percentile(data = majalaya_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 7)
+Q_m_aug <- calc_longterm_percentile(data = majalaya_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 8)
+Q_m_sep <- calc_longterm_percentile(data = majalaya_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 9)
+Q_m_oct <- calc_longterm_percentile(data = majalaya_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 10)
+Q_m_nov <- calc_longterm_percentile(data = majalaya_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 11)
+Q_m_dec <- calc_longterm_percentile(data = majalaya_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 12)
+
+
+# debit_perbulan_sapan ----------------------------------------------------
+Q_s_jan <- calc_longterm_percentile(data = sapan_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 1)
+Q_s_feb <- calc_longterm_percentile(data = sapan_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 2)
+Q_s_mar <- calc_longterm_percentile(data = sapan_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 3)
+Q_s_apr <- calc_longterm_percentile(data = sapan_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 4)
+Q_s_may <- calc_longterm_percentile(data = sapan_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 5)
+Q_s_jun <- calc_longterm_percentile(data = sapan_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 6)
+Q_s_jul <- calc_longterm_percentile(data = sapan_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 7)
+Q_s_aug <- calc_longterm_percentile(data = sapan_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 8)
+Q_s_sep <- calc_longterm_percentile(data = sapan_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 9)
+Q_s_oct <- calc_longterm_percentile(data = sapan_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 10)
+Q_s_nov <- calc_longterm_percentile(data = sapan_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 11)
+Q_s_dec <- calc_longterm_percentile(data = sapan_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 12)
+
+# debit_perbulan_dy_kolot -------------------------------------------------
+Q_dy_jan <- calc_longterm_percentile(data = dy_kolot_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 1)
+Q_dy_feb <- calc_longterm_percentile(data = dy_kolot_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 2)
+Q_dy_mar <- calc_longterm_percentile(data = dy_kolot_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 3)
+Q_dy_apr <- calc_longterm_percentile(data = dy_kolot_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 4)
+Q_dy_may <- calc_longterm_percentile(data = dy_kolot_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 5)
+Q_dy_jun <- calc_longterm_percentile(data = dy_kolot_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 6)
+Q_dy_jul <- calc_longterm_percentile(data = dy_kolot_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 7)
+Q_dy_aug <- calc_longterm_percentile(data = dy_kolot_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 8)
+Q_dy_sep <- calc_longterm_percentile(data = dy_kolot_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 9)
+Q_dy_oct <- calc_longterm_percentile(data = dy_kolot_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 10)
+Q_dy_nov <- calc_longterm_percentile(data = dy_kolot_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 11)
+Q_dy_dec <- calc_longterm_percentile(data = dy_kolot_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 12)
+
+# debit_perbulan_nanjung --------------------------------------------------
+Q_n_jan <- calc_longterm_percentile(data = nanjung_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 1)
+Q_n_feb <- calc_longterm_percentile(data = nanjung_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 2)
+Q_n_mar <- calc_longterm_percentile(data = nanjung_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 3)
+Q_n_apr <- calc_longterm_percentile(data = nanjung_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 4)
+Q_n_may <- calc_longterm_percentile(data = nanjung_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 5)
+Q_n_jun <- calc_longterm_percentile(data = nanjung_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 6)
+Q_n_jul <- calc_longterm_percentile(data = nanjung_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 7)
+Q_n_aug <- calc_longterm_percentile(data = nanjung_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 8)
+Q_n_sep <- calc_longterm_percentile(data = nanjung_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 9)
+Q_n_oct <- calc_longterm_percentile(data = nanjung_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 10)
+Q_n_nov <- calc_longterm_percentile(data = nanjung_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 11)
+Q_n_dec <- calc_longterm_percentile(data = nanjung_rename,
+                                    percentiles = c(5,10,20,30),
+                                    months = 12)
+
+
+
+# output_debit_perbulan ---------------------------------------------------
+
+write.csv(rbind(Q_m_jan, Q_m_feb, Q_m_mar,Q_m_apr,Q_m_may,Q_m_jun,
+                Q_m_jul,Q_m_aug,Q_m_sep,Q_m_oct,Q_m_nov,Q_m_dec), 
+          "4_output/Q_bulanan_majalaya.csv")
+
+write.csv(rbind(Q_s_jan, Q_s_feb, Q_s_mar,Q_s_apr,Q_s_may,Q_s_jun,
+                Q_s_jul,Q_s_aug,Q_s_sep,Q_s_oct,Q_s_nov,Q_s_dec), 
+          "4_output/Q_bulanan_sapan.csv")
+
+write.csv(rbind(Q_dy_jan, Q_dy_feb, Q_dy_mar,Q_dy_apr,Q_dy_may,Q_dy_jun,
+                Q_dy_jul,Q_dy_aug,Q_dy_sep,Q_dy_oct,Q_dy_nov,Q_dy_dec), 
+          "4_output/Q_bulanan_dy_kolot.csv")
+
+write.csv(rbind(Q_n_jan, Q_n_feb, Q_n_mar,Q_n_apr,Q_n_may,Q_n_jun,
+                Q_n_jul,Q_n_aug,Q_n_sep,Q_n_oct,Q_n_nov,Q_n_dec), 
+          "4_output/Q_bulanan_nanjung.csv")
