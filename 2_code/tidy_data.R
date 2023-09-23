@@ -368,3 +368,9 @@ write.csv(rbind(Q_dy_jan, Q_dy_feb, Q_dy_mar,Q_dy_apr,Q_dy_may,Q_dy_jun,
 write.csv(rbind(Q_n_jan, Q_n_feb, Q_n_mar,Q_n_apr,Q_n_may,Q_n_jun,
                 Q_n_jul,Q_n_aug,Q_n_sep,Q_n_oct,Q_n_nov,Q_n_dec), 
           "4_output/Q_bulanan_nanjung.csv")
+
+
+# hitung annual trend -----------------------------------------------------
+
+compute_annual_trends(data = nanjung_rename,zyp_method = "zhang",
+                      basin_area = 1718, ignore_missing = T)

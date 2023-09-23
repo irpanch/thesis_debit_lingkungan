@@ -64,3 +64,11 @@ Box.test(mymodel$residuals,lag=10,type="Ljung-Box")
 Box.test(mymodel$residuals,lag=15,type="Ljung-Box")
 
 # karena nilai p-value nya kecil maka model bisa diterima
+
+# coba dengan data dari nanjung
+summary(nanjung_rename$Value)
+tsdata <- ts(nanjung_rename$Value, frequency = 12) 
+ddata <- decompose(tsdata, "multiplicative")
+plot(ddata)
+plot(ddata$trend)
+plot(ddata$seasonal)
