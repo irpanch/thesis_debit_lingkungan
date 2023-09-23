@@ -1,0 +1,72 @@
+---
+title: "Kajian Debit Lingkungan di Sungai Citarum Hulu"
+author: "Irpan Chumaedi"
+format: 
+  html:
+    theme: journal
+editor: visual
+toc: true
+toc-depth: 3
+number-sections: true
+execute: 
+  echo: false
+bibliography: references.bib
+---
+
+# Abstrak {.unnumbered}
+
+Perubahan karakteristik debit sungai akibat kegiatan antropogenik berdampak langsung pada segala mahluk hidup yang bergantung pada sungai tersebut. Selain daripada manusia, sungai merupakan tempat hidup habitat akuatik yang perlu dijaga kelestariannya. Dari sisi hidrologi mitigasi terhadap kebutuhan minimal air di sungai ini sudah dituangkan dalam bentuk "debit lingkungan" atau "debit pemeliharaan", salah satu metode yang disarankan dalam aturan PP No. 38 Tahun 2011 adalah Q~95~. Akan tetapi metode ini hanya didasarkan pada kebutuhan debit minimum sungai, tanpa melihat respon habitat yang ada di dalamnya.
+
+Maksud dan tujuan dari penelitian adalah untuk mengetahui seberapa besar perubahan karakteristik debit (kesenjangan debit / *gap*) pada sungai citarum hulu, melakukan indentifikasi kondisi habitat asli serta memperoleh metode yang paling sesuai untuk yang mengakomodir kebutuhan habitat yang ada.
+
+Dalam penelitian ini digunakan tiga metode pendekatan, yaitu: pendekatan hidrologi/hidrolika, pendekatan aturan lingkungan, dan pendekatan kondisi optimum habitat. Untuk hidrologi digunakan pengamatan debit tiga pos duga air (Sapan, Dayeuh Kolot, dan Nanjung) selama 17 tahun yang kemudian dilakukan analisa lengkung durasi debit (FDC). Nilai FDC tersebut kemudian dijadikan input/syarat batas pada pemodelan hidrolika untuk memperoleh karakteristik hidrolika seperti kecepatan dan kedalaman di tiap-tiap pos duga air.  Berikutnya untuk aturan lingkungan menggunakan PP. No. 82 Tahun 2001. Untuk kondisi optimum habitat didasarkan pada spesies ikan Hampala dikarenakan spesies asli terbanyak yang ada di Sungai Citarum Hulu.
+
+Kesenjangan (*gap*) yang paling besar diantara pos duga air di Citarum Hulu ada di PDA Nanjung. Dimana dibandingkan periode 2004-2012, pada periode 2013-2020 terjadi peningkatan debit dibulan April sebesar 80.8% dan penurunan debit di Bulan Agustus sebesar 49.3%. dari hasil hidrologi dan hidrolika diperoleh nilai Debit Q~95~ Di PDA Sapan 1.76 m^3^/dtk dengan kecepatan 0.08 m/dtk serta kedalaman muka air 1.07 m. Untuk PDA Dayeuh Kolot didapat nilai debit Q~95~ 2.46 m^3^/dtk dengan kecepatan 0.05 m/dtk serta kedalaman muka air 3.61 m. Pada lokasi lain, PDA Nanjung, nilai Debit Q~95~ 5.81 m^3^/dtk dengan kecepatan 0.27 m/dtk serta kedalaman muka air 1.98 m.
+
+Dari segi aturan lingkungan, belum terdapat batasan minimal untuk debit yang dibutuhkan untuk habitat perairan. Parameter yang dipakai adalah kualitas air yang tertera dalam PP No. 82 Tahun 2001.
+
+Untuk spesies habitat yang mewakili Sungai Citarum Hulu dipilih Ikan Hampala (*Hampala macrolepidota*). Kondisi lingkungan yang paling optimal pada ikan tersebut diantaranya kecepatan arus 0.02 m/detik dan kedalaman air 4.6 meter.
+
+Kata kunci: debit lingkungan, habitat perairan, citarum hulu.
+
+# Pendahuluan {#sec-pendahuluan}
+
+## Latar Belakang {#sec-latar-belakang}
+
+Secara global, penggunaan air yang berlebihan menyebabkan masalah lingkungan yang sangat serius dalam beberapa dekade terakhir [@vörösmarty2010]. Air yang dibutuhkan oleh manusia naik secara eksponensial semenjak masa pra-industrialisasi khususnya setelah tahun 1950-an [@riverine2018] . Krisis air yang terjadi bukan hanya terjadi dari sudut pandang manusia, namun juga biota air sungai yang hidup didalamnya. *World Wide Fund for Nature* atau @wwf2020, menyebutkan bahwa hingga 84% hewan air tawar di seluruh dunia telah berkurang sejak tahun 1970.
+
+## Masalah Penelitian
+
+## Maksud dan Tujuan Penelitian
+
+## Lingkup Studi
+
+## Batasan Masalah
+
+## Lokasi Kajian
+
+## Sistematika Penulisan
+
+# Tinjauan Pustaka
+
+## Studi Literatur
+
+## Sungai dan DAS
+
+## Analisa Debit Lingkungan
+
+# Metodologi Penelitian
+
+# Analisa
+
+## Analisa Lengkung Durasi Debit (*FDC*)
+
+## Analisa Kesenjangan Debit
+
+## Tinjauan Berdasarkan Aturan Lingkungan
+
+## Analisa Kecocokan Habitat
+
+# Kesimpulan
+
+# Daftar Pustaka {.unnumbered}
